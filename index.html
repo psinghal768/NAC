@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<style>
+		body {
+		  font-family: Verdana, sans-serif;
+		  margin: 0;
+		}
+		
+		* {
+		  box-sizing: border-box;
+		}
+		
+		.row > .column {
+		  padding: 0 8px;
+		}
+		
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		
+		.column {
+		  float: left;
+		  width: 25%;
+		}
+		
+		/* The Modal (background) */
+		.modal {
+		  display: none;
+		  position: fixed;
+		  z-index: 1;
+		  padding-top: 100px;
+		  left: 0;
+		  top: 0;
+		  width: 100%;
+		  height: 100%;
+		  overflow: auto;
+		  background-color: #101010;
+		  opacity: 98%;
+		
+		}
+		
+		/* Modal Content */
+		.modal-content {
+		  position: relative;
+		  background-color: #fefefe;
+		  margin: auto;
+		  padding: 0;
+		  width: 90%;
+		  max-width: 1200px;
+		}
+		
+		/* The Close Button */
+		.close {
+		  color: white;
+		  position: absolute;
+		  top: 10px;
+		  right: 25px;
+		  font-size: 50px;
+		  font-weight: bold;
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+		
+		.close:hover,
+		.close:focus {
+		  color: #fefefe;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+		
+		.mySlides {
+		  display: none;
+		}
+		
+		.cursor {
+		
+		  cursor: pointer;
+		}
+		
+		/* Next & previous buttons */
+		.prev,
+		.next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  padding: 9px;
+		  margin-top: -50px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 20px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		  -webkit-user-select: none;
+		}
+		
+		/* Position the "next button" to the right */
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+		
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover,
+		.next:hover {
+		  background-color: rgba(0, 0, 0, 0.8);
+		  opacity: 90%;
+		  
+		}
+		
+		/* Number text (1/3 etc) */
+		.numbertext {
+		  color: #fefefe;
+		  font-size: 12px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+		
+		img {
+			
+		 position: relative;
+		 align-items: center;
+		 padding-top: 25px;
+		 padding-bottom: 30px;
+		 padding-right: 30px;
+		 padding-left: 25px
+		 ;
+		}
+		
+		.caption-container {
+		  text-align: center;
+		  background-color: black;
+		  opacity: 90%;
+		  padding: 2px 16px;
+		  color: white;
+		}
+		
+		.demo {
+		  opacity: 0.6;
+		}
+		
+		.active,
+		.demo:hover {
+		  opacity: 1;
+		}
+		
+		img.hover-shadow {
+		  transition: 0.3s;
+		}
+		
+		.hover-shadow:hover {
+		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+		</style>
+	<head>
+			<head>
+					<title>NAC</title>
+
+					<meta charset="utf-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+					<meta name="Blue">
+					<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+				
+					<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+					<link rel="stylesheet" href="css/animate.css">
+					
+					<link rel="stylesheet" href="css/owl.carousel.min.css">
+					<link rel="stylesheet" href="css/owl.theme.default.min.css">
+					<link rel="stylesheet" href="css/magnific-popup.css">
+				
+					<link rel="stylesheet" href="css/aos.css">
+				
+					<link rel="stylesheet" href="css/ionicons.min.css">
+				
+					<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+				
+				
+					
+			
+					<link rel="stylesheet" href="css/icomoon.css">
+					<link rel="stylesheet" href="css/style.css">
+		
+
+		
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="fonts2/icomoon/style.css">
+	
+		<link rel="stylesheet" href="css/1bootstrap.min.css">
+		<link rel="stylesheet" href="css/1jquery-ui.css">
+		<link rel="stylesheet" href="css/1owl.carousel.min.css">
+		<link rel="stylesheet" href="css/1owl.theme.default.min.css">
+		<link rel="stylesheet" href="css/1owl.theme.default.min.css">
+	
+		<link rel="stylesheet" href="css/1jquery.fancybox.min.css">
+	
+		<link rel="stylesheet" href="css/1bootstrap-datepicker.css">
+	
+	
+	
+		<link rel="stylesheet" href="css/1aos.css">
+	
+		<link rel="stylesheet" href="css/1style.css">
+		<link rel="stylesheet" href="css/2bootstrap.min.css">
+
+    <!--====== Line Icons css ======-->
+    <link rel="stylesheet" href="css/2LineIcons.css">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="css/2magnific-popup.css">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/2default.css">
+
+    <!--====== Style css ======-->
+	<link rel="stylesheet" href="css/2style.css">
+	
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+		
+	  </head>
+	  <body onload="openModal()" data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	
+	 
+	
+	  <div class="site-wrap">
+	
+		<div class="site-mobile-menu site-navbar-target">
+		  <div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close mt-3">
+			  <span class="icon-close2 js-menu-toggle"></span>
+			</div>
+		  </div>
+		  <div class="site-mobile-menu-body"></div>
+		</div>
+	   
+
+  
+  </div><!--/end of my-popup-background-layer -->
+		<header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+	
+		  <div class="container">
+			<div class="row align-items-center">
+			  
+			  <div class="col-6 col-xl-2">
+				<h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0"><img src="images/logo.png" alt="Logo"><span class="text-primary"></span>  </a></h1>
+			  </div>
+	
+			  <div class="col-12 col-md-10 d-none d-xl-block">
+				<nav class="site-navigation position-relative text-right" role="navigation">
+	
+				  <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+					<li><a href="#home-section" class="nav-link">Home</a></li>
+					<li><a href="#about-section" class="nav-link">About Us</a></li>
+						<li><a href="#gallery-section" class="nav-link">Gallery</a></li>
+						<li><a href="#services-section" class="nav-link">Courses</a></li>
+						<li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
+					<li><a href="#contact-section" class="nav-link">Contact</a></li>
+					<li class="social"><a href="https://www.facebook.com/National-Academy-of-Commerce-NAC-254129451287819/" target="_blank" class="nav-link"><span class="icon-facebook"></span></a></li>
+					<li class="social"><a href="https://www.instagram.com/" target="_blank" class="nav-link"><span class="icon-instagram"></span></a></li>
+					<li class="social"><a href="https://api.whatsapp.com/send?phone=918400268268&text=&source=&data=" target="_blank" class="nav-link"><span class="icon-whatsapp"></span></a></li>
+				
+				</ul>
+				</nav>
+			  </div>
+	
+	
+			  <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+	
+			</div>
+		  </div>
+		  
+		</header>
+	
+<div>
+		<h1 id="home-section"></h1>
+		
+		 
+		<div class="site-blocks-cover overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade" id="home-section">
+	
+		  <div class="container">
+			<div class="row align-items-center justify-content-center">
+	
+			  
+			  <div class="col-md-10 mt-lg-5 text-center">
+				<div class="single-text owl-carousel">
+				  <div class="slide">
+					<h1 class="text-uppercase" data-aos="fade-up">National Academy Of Commerce</h1>
+					<p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="80">
+						Experience the Best Lectures from the Most Trusted Faculties across India for CA, CS, CMA only at National Academy of Commerce (NAC)</p>
+					<div data-aos="fade-up" data-aos-delay="80">
+					  <a href="https://api.whatsapp.com/send?phone=918400268268&text=&source=&data=" target="_blank" class="btn  btn-primary mr-2 mb-2">Get In Touch</a>
+					</div>
+				  </div>
+	
+				  <div class="slide">
+					<h1 class="heading-section-white" data-aos="fade-up"> 99 </h1>
+					<h1 class="text-uppercase" data-aos="fade-up"> IS NOT ACCEPTABLE</h1>
+					<br>
+					<br>
+					<br>
+					<p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100"></p>
+					<div data-aos="fade-up" data-aos-delay="100">
+						<a href="https://api.whatsapp.com/send?phone=918400268268&text=&source=&data=" target="_blank" class="btn  btn-primary mr-2 mb-2">Get In Touch</a>
+					
+					</div>
+				  </div>
+	
+				  
+	
+				</div>
+			  </div>
+				
+			</div>
+		  </div>
+	
+		  <a href="#about-section" class="mouse smoothscroll">
+			<span class="mouse-icon">
+			  <span class="mouse-wheel"></span>
+			</span>
+		  </a>
+		</div>  
+</div>
+
+	<div>
+	<h1 id="about-section"></h1>
+    <section class="ftco-section ftco-about">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-6">
+    				<div class="img img-video d-flex align-items-center" style="background-image: url(images/thumb1.jpg);">
+    					<div class="video justify-content-center">
+							<a href="https://youtu.be/gxhQu5c3NqA" target="_blank" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+								<span class="ion-ios-play"></span>
+		  					</a>
+							</div>
+    				</div>
+    				<div class="thumb-wrap d-flex">
+    					<a href="https://www.youtube.com/watch?v=jgW98AXNePY" target="_blank" class="thumb img" style="background-image: url(images/thumb2.jpg);"></a>
+    					<a href="https://www.youtube.com/watch?v=HIbItKCO0R0" target="_blank" class="thumb img" style="background-image: url(images/thumb3.jpg);"></a>
+    					<a href="https://www.youtube.com/watch?v=lLCI2V9Bl5I" target="_blank" class="thumb img" style="background-image: url(images/thumb4.jpg);"></a>
+    				</div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 ftco-animate d-flex align-items-center">
+    				<div class="text pt-4 pt-md-0">
+		          <div class="heading-section mb-4">
+		          	<span class="subheading">Hello</span>
+		            <h2 class="mb-5">Welcome to <span>National Academy of Commerce </span> </h2>
+		          <p>NAC  is a premier institute that imparts specialized education to the students undergoing Chartered Accountancy, Company Secretary and Certified Managment Accountant Course.</p>
+	          </div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+</div>
+	
+<div>
+	<h1 id="Features"></h1>
+    <section class="ftco-section bg-light">
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-md-8 text-center">
+    				<div class="heading-section mb-5">
+							
+	          	<span class="subheading"><small><i class="text px-md-2"></i>Features<i></i></small></span>
+	            <h2 class="mb-1">We <span>Believe</span> in excellence</h2>
+	          </div>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-md-3">
+    				<div class="services text-center ftco-animate">
+							<div class="icon d-flex justify-content-center align-items-center">
+								
+									<span class="icon-laptop"></span>
+								
+							</div>
+							<div class="text px-md-2">
+								<h3>Professional Teaching</h3>
+								<br>
+					<!--	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+					--></div>
+						</div>
+    			</div>
+					<div class="col-md-3">
+						<div class="services text-center ftco-animate">
+							<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-user"></span>
+							</div>
+							<div class="text px-md-2">
+								<h3>Personal attention by faculties</h3>
+								<br>
+								<!----<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+								--></div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="services text-center ftco-animate">
+							<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-globe"></span>
+							</div>
+							<div class="text px-md-2">
+								<h3>World class faculties</h3>
+								<br>
+								<!----	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+							-->	</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="services text-center ftco-animate">
+							<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-group"></span>
+							</div>
+							<div class="text px-md-2">
+								<h3>Super dedicated management</h3>
+								<br>
+								<!----	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+								--></div>
+						</div>
+					</div>
+    		</div>
+    	
+    </section>
+</div>
+
+<div>
+	<h1 id="gallery-section"></h1>
+    <section class="ftco-section ftco-package-program bg-darken">
+	  	<div class="container-fluid px-0">
+	  		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section heading-section-white ftco-animate text-center">
+            <span class="subheading"><small><i class=""></i>Gallery<i class=""></i></small></span>
+            <h2 class="mb-1">Things you will experience at <span>NAC</span></h2>
+            <p><p>The journey you will enjoy and cherish memories forever</p></p>
+          </div>
+        </div>
+			<div class="container">
+
+			  
+				<div class="row no-gutters">
+					<div class="col-md-12">
+						<div class="carousel-package-program owl-carousel">
+					  <div class="item">
+						  <div class="package-membership ftco-animate">
+									<a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img1.jpg); border: 5px solid orange;">
+										
+									</a>
+								</div>
+					  </div>
+					  
+					  <div class="item">
+						  <div class="package-membership ftco-animate">
+									<a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img2.jpg);border: 5px solid orange;">
+										
+									</a>
+								</div>
+					  </div>
+					  <div class="item">
+						  <div class="package-membership ftco-animate">
+									<a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img3.jpg);border: 5px solid orange;">
+									
+									</a>
+								</div>
+					  </div>
+					  <div class="item">
+						  <div class="package-membership ftco-animate">
+									<a class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img4.jpg);border: 5px solid orange;">
+										
+									</a>
+								</div>
+					  </div>
+		
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img6.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img7.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img8.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img9.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img10.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img11.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img2.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img12.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img13.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img14.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img15.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img16.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div><div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img17.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img18.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+								<div class="item">
+									<div class="package-membership ftco-animate">
+											  <a  class="img d-flex justify-content-center align-items-center" style="background-image: url(images/img19.jpg);border: 5px solid orange;">
+												  
+											  </a>
+										  </div>
+								</div>
+							
+					  </div>
+					</div>
+					</div>
+				</div>
+				</div>
+			  </div>
+			</div>
+		  </section>
+	</div>
+	<div>
+			<h1 id="services-section"></h1>
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+         
+            <h2 class="mb-1">Courses Offered</h2>
+          </div>
+        </div>
+        <div class="row">
+	        <div class="col-md-4 ftco-animate">
+	          <div class="block-7">
+	            <div class="text-center">
+	     
+	            <span class="price"><sup></sup> <span class="number">CA</span></span>
+	 
+	            <a href="#contact-sections" class="btn btn-primary d-block px-2 py-4 mb-4">Get Started</a>
+	            
+	            
+	            
+	            <ul class="pricing-text">
+	              <li>Foundation</li>
+	              <li>Inter</li>
+	              <li>Final</li>
+	              
+	            </ul>
+	            </div>
+	          </div>
+	        </div>
+			<div class="col-md-4 ftco-animate">
+					<div class="block-7">
+					  <div class="text-center">
+					
+					  <span class="price"> <span class="number">CS</span></span>
+			
+					 <a href="#contact-sections" class="btn btn-primary d-block px-2 py-4 mb-4">Get Started</a>
+					  
+				
+					  
+					  <ul class="pricing-text">
+						<li>Foundation</li>
+						<li>Executive</li>
+						<li>Professional</li>
+						
+					  </ul>
+					  </div>
+					</div>
+				  </div>
+				  <div class="col-md-4 ftco-animate">
+					<div class="block-7">
+					  <div class="text-center">
+					
+					  <span class="price"> <span class="number">CMA</span></span>
+			
+					 <a href="#contact-sections" class="btn btn-primary d-block px-2 py-4 mb-4">Get Started</a>
+					  
+			
+					  
+					  <ul class="pricing-text">
+							<li>Foundation</li>
+							<li>Intermediate</li>
+							<li>Final</li>
+						
+					  </ul>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  
+				<div class="row">
+						<div class="col-md-4 ftco-animate">
+						  <div class="block-7">
+							<div class="text-center">
+					 
+							<span class="price"><sup></sup> <span class="number">Tally</span></span>
+					
+							<a href="#contact-sections" class="btn btn-primary d-block px-2 py-4 mb-4">Get Started</a>
+							
+						
+							
+							
+							</div>
+						  </div>
+						</div>
+						<div class="col-md-4 ftco-animate">
+								<div class="block-7">
+								  <div class="text-center">
+								
+								  <span class="price"> <span class="number">Excel</span></span>
+								  
+								 <a href="#contact-sections" class="btn btn-primary d-block px-2 py-4 mb-4">Get Started</a>
+								  
+							
+								  
+								
+								  </div>
+								</div>
+							  </div>
+							  <div class="col-md-4 ftco-animate">
+								<div class="block-7">
+								  <div class="text-center">
+								
+								  <span class="price"> <span class="number">Stock</span></span>
+								  
+								 <a href="#contact-sections" class="btn btn-primary d-block px-2 py-4 mb-4">Get Started</a>
+								  
+								
+								  
+								 
+								  </div>
+								</div>
+							  </div>
+							</div>
+	            </div>
+	            </div>
+	          </div>
+	        </div>
+	     
+		 
+								
+     
+    </section>
+ </div>
+ <div>
+		<!-- <h1 id="testimonials-section"></h1>
+    <section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <span class="subheading"><small><i class=""></i>Testimonies<i class=""></i></small></span>
+            <h2 class="mb-1">Successful Stories</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="text">
+                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/bg_1.jpg)">
+		                    <span class="quote d-flex align-items-center justify-content-center">
+		                      <i class="icon-quote-left"></i>
+		                    </span>
+		                  </div>
+		                  <div class="ml-4">
+		                  	<p class="name">Gabby Smith</p>
+		                    <span class="position">Customer</span>
+		                  </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="text">
+                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/bg_1.jpg)">
+		                    <span class="quote d-flex align-items-center justify-content-center">
+		                      <i class="icon-quote-left"></i>
+		                    </span>
+		                  </div>
+		                  <div class="ml-4">
+		                  	<p class="name">Floyd Weather</p>
+		                    <span class="position">Customer</span>
+		                  </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="text">
+                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/bg_1.jpg)">
+		                    <span class="quote d-flex align-items-center justify-content-center">
+		                      <i class="icon-quote-left"></i>
+		                    </span>
+		                  </div>
+		                  <div class="ml-4">
+		                  	<p class="name">J</p>
+		                    <span class="position">Customer</span>
+		                  </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="text">
+                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/bg_1.jpg)">
+		                    <span class="quote d-flex align-items-center justify-content-center">
+		                      <i class="icon-quote-left"></i>
+		                    </span>
+		                  </div>
+		                  <div class="ml-4">
+		                  	<p class="name">Lance Roger</p>
+		                    <span class="position">Customer</span>
+		                  </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="text">
+                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/bg_1.jpg)">
+		                    <span class="quote d-flex align-items-center justify-content-center">
+		                      <i class="icon-quote-left"></i>
+		                    </span>
+		                  </div>
+		                  <div class="ml-4">
+		                  	<p class="name">Kenny Bufer</p>
+		                    <span class="position">Customer</span>
+		                  </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+  
+</div>
+<div> -->
+		<h1 id="Stats-section"></h1>
+<section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+<div class="container">
+<div class="row justify-content-center">
+	<div class="col-md-10">
+		<div class="row">
+		  <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+			<div class="block-18 text-center">
+			  <div class="text">
+				  <strong class="number" data-number="2000">200</strong>
+				  <span>Students</span>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+			<div class="block-18 text-center">
+			  <div class="text">
+				  <strong class="number" data-number="1700">0</strong>
+				  <span>Succesful Stories</span>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+			<div class="block-18 text-center">
+			  <div class="text">
+				  <strong class="number" data-number="50">0</strong>
+				  <span>Dedicated Staff</span>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+			<div class="block-18 text-center">
+			  <div class="text">
+				  <strong class="number" data-number="20">0</strong>
+				  <span>World Class Faculties</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+</div>
+</div>
+</section>
+
+</div>
+<div>
+		<h1 id="Write-section"></h1>
+		  <div class="row">
+			<div class="col-md-12 mb-5">
+			  
+  <!-- @TODO validation-->
+			  <form  class="p-5 bg-white" id="ContactForm" method="POST" action="https://formspree.io/nacedu@yahoo.com">
+				
+					<h2 class="section-title mb-3 ali">Contact Form</h2>
+					<h6 class="subheading">Write us, so we reach you out to bring smile on your face :) </h6>
+  <br>
+				<div class="row form-group"> 
+				  <div class="col-md-6 mb-3 mb-md-0"> 
+					<label class="text-black" for="name">First Name</label>
+					<input type="text" name="name" id="name" class="form-control">
+				  </div>
+				  <div class="col-md-6">
+					<label class="text-black" for="lname">Last Name</label>
+					<input type="name" name="name" id="lname" class="form-control">
+				  </div>
+				</div>
+  
+				<div class="row form-group">
+				  
+				  <div class="col-md-12">
+					<label class="text-black" for="email">Email</label> 
+					<input type="email" name="name" id="email" class="form-control">
+				  </div>
+				</div>
+  
+				<div class="row form-group">
+				  
+					<div class="col-md-12">
+					  <label class="text-black" for="number">Contact number</label> 
+					  <input type="number" name="name" id="number" class="form-control">
+					</div>
+				  </div>
+  
+				<div class="row form-group">
+				  <div class="col-md-12">
+					<label class="text-black" for="message">Message</label> 
+					<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+				  </div>
+				</div>
+  
+				<div class="row form-group">
+				  <div class="col-md-12">
+					<button type="submit" class="btn btn-primary btn-md text-white">Send Message</button>
+				  </div>
+				</div>
+
+			  </form>
+			</div>
+			
+		  </div>
+		</div>
+	  </section>
+	</section>
+   </div>
+</div>
+
+<section class="ftco-section ftco-package-program bg-darken">
+	<div class="container-fluid px-0">
+		<div class="row justify-content-center mb-5 pb-3">
+			
+	<div class="col-md-7 heading-section heading-section-white ftco-animate text-center">
+	  <h2 class="mb-1"> <span>Pen Drive Related</span></h2>
+	  <p>
+		Queries/Orders/Support/Combo/Discounts
+	  </p>
+	  <span class="subheading"> <h3 class="mb-1"><span><br> just 🎯 WhatsApp us at</span></h3>
+	  
+	  
+	  <h2 class="mb-1"><span><a href="tel://+919336215532">+919336215532</a></span></h2>
+	 
+	</div>
+		</div>
+	</div>
+  
+   
+</section>
+
+   <div>
+	<h1 id="contact-sections"></h1>
+
+<section class="site-section bg-light" id="contact-section" data-aos="fade">
+	<div class="container">
+	  <div class="row mb-5">
+		<div class="col-12 text-center">
+			<h1></h1>
+				<br>
+		  <h2 class="section-title mb-3">Contact Us</h2>
+		</div>
+	  </div>
+	  <div class="row mb-5">
+		
+
+
+		<div class="col-md-4 text-center">
+		  <p class="mb-4">
+			<span class="icon-room d-block h2 text-primary">
+			<p> National Academy of Commerce (NAC)</p>
+			<p>	
+			  <a href="https://goo.gl/maps/6UPycGsFQ8Ye5MF76">14 Sammelan Marg, Near Chandralok Theatre
+				Prayagraj, (Allahbad) - 211003 </a></p>
+				
+		  </p>
+		</div>
+		<div class="col-md-4 text-center">
+		  <p class="mb-4">
+			<span class="icon-phone d-block h2 text-primary"></span>
+			<p>Anupama Ma'am:  <a href="tel://9506554198">+91 9506 55 4198</a></p>
+			<p>Utkarsh Sir  <a href="tel://7607812415">+91  7607 81 2415</a></p>
+			<p>Office:  <a href="tel://8400268268">+91 8400 26 8268</a></p>
+		  </p>
+		</div>
+		<div class="col-md-4 text-center">
+		  <p class="mb-4">
+			<span class="icon-mail_outline d-block h2 text-primary"></span>
+			<p>Email:<a href="mailto:nacedu@yahoo.com"> nacedu@yahoo.com</a></p>
+			<p>Email: <a href="mailto:nacallahabad@gmail.com "> nacallahabad@gmail.com </a></p>
+			<p>Email: <a href="mailto:backup.naclld@gmail.com"> backup.naclld@gmail.com</a></p>
+		  </p>
+		</div>
+	
+		
+		</div>
+	  </div>
+		
+	  </div>
+	</div>
+	
+
+<div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+  
+	  <div class="mySlides">
+		<div class="numbertext">1 / 4</div>
+		<img height= "775px" src="images/1.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">2 / 4</div>
+		<img  height= "775px" src="images/2.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">3 / 4</div>
+		<img  height= "775px" src="images/3.jpg" style="width:100%">
+	  </div>
+	  
+	  <div class="mySlides">
+		<div class="numbertext">4 / 4</div>
+		<img  height= "775px" src="images/4.jpg" style="width:100%">
+	  </div>
+	  
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+	  <div class="caption-container">
+		<p id="caption"></p>
+	  </div>
+  
+  
+	 
+	</div>
+  </div>
+	  <footer id="footer" class="footer-area">
+        <div class="footer-widget pt-130 pb-130">
+  
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="footer-content text-center">
+                            
+							<p><h1 class="text-white"> Follow us on </h1></p>
+                           <ul>
+                               
+                                
+                                <li><a href="https://www.facebook.com/National-Academy-of-Commerce-NAC-254129451287819/?ref=bookmarks"target="_blank" class="nav-link" ><i class="icon-facebook"></i></a></li>
+								<li><a href="https://www.instagram.com/"target="_blank" class="nav-link"><i class="icon-instagram"></i></a></li>
+                            
+                            </ul>
+							<div class="row pt-3 mt-3 text-center">
+									<div class="col-md-12">
+										<p>Copyright &copy;
+										  <script>document.write(new Date().getFullYear());</script> | All rights reserved </p>
+  <p> Made by <a href="https://aannuuj.com" target="blank">aannuuj</a> </p>
+									</div>	
+								  </div>
+                    </div>
+                </div> 
+            </div> 
+        
+	 
+
+	 </footer>
+	  
+        
+	 <script src="js/contact.js"></script>
+  
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/aos.js"></script>
+		<script src="js/jquery.animateNumber.min.js"></script>
+	
+		<script src="js/scrollax.min.js"></script>
+	
+		<script src="js/main.js"></script>
+		
+<script>
+	function openModal() {
+	  document.getElementById("myModal").style.display = "block";
+	}
+	
+	function closeModal() {
+	  document.getElementById("myModal").style.display = "none";
+	}
+	
+	var slideIndex = 1;
+	showSlides(slideIndex);
+	
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+	
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+	
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  var captionText = document.getElementById("caption");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		  dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	  captionText.innerHTML = dots[slideIndex-1].alt;
+	}
+	</script>  
+  
+  <script src="js/1jquery-3.3.1.min.js"></script>
+  <script src="js/1jquery-ui.js"></script>
+  <script src="js/1popper.min.js"></script>
+  <script src="js/1bootstrap.min.js"></script>
+  <script src="js/1owl.carousel.min.js"></script>
+  <script src="js/1jquery.countdown.min.js"></script>
+  <script src="js/1jquery.easing.1.3.js"></script>
+  <script src="js/1aos.js"></script>
+  <script src="js/1jquery.fancybox.min.js"></script>
+  <script src="js/1jquery.sticky.js"></script>
+  <script src="js/1isotope.pkgd.min.js"></script>
+
+  
+  <script src="js/1main.js"></script>
+  <script src="js/2main.js"></script>
+  
+  </body>
+</html>
